@@ -5,9 +5,23 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
+      <style>
+            body{ 
+                  align-items: center;
+            }
+      </style>
 </head>
 <body>
-<h1>test <%= pokemon.name %> </h1>
+<h1><%= pokemon.name %> </h1>
+<h3>Stats</h3>
+<ul>
+      <li>Attack: <%= pokemon.stats.attack %></li>
+      <li>HP: <%= pokemon.stats.hp %></li>
+      <li>Speed: <%= pokemon.stats.speed %></li>
+      <li>Defense: <%= pokemon.stats.defense %></li>
+</ul>
+
+<img src="<%= pokemon.img %>" alt="picture">
 
 </body>
 </html>

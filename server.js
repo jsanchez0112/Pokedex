@@ -56,5 +56,5 @@ app.get('/pokemon/:indexOfSmData' , (req,res) => {
 
 
 app.listen(port , () => {
-      console.log(smData)
+      console.log(smData[0])
 })
