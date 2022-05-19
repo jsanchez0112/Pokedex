@@ -8,18 +8,19 @@
 </head>
 <body>
 <h1>Top Pokemon</h1>
+<a href="/pokemon/new">Add a Pokemon!</a>
+
+<br/>
 
  <% for (let i = 0; i < pokemon.length; i++){ %>
       <a href="/pokemon/<%= i %>">
       <img src="<%= pokemon[i].img %>" alt="">
-</a>
-<% } %>
+      </a>
+<form action="/pokemon/<%i; %>?_method=DELETE" method="POST">
+      <input type="submit" value="DELETE" />
+    </form>
+    <a href="/pokemon/<%=i; %>/edit">Edit</a>
+    <% } %>
 
-
-
-
-
-
-<a href="/pokemon/new">Add a Pokemon!</a>
 </body>
 </html>

@@ -27,14 +27,24 @@ data.push(req.body)
 res.redirect('/pokemon')
 })
 
+app.put('/pokemon/:indexOfSmData' , (req,res) => {
+      smData[req.params.indexOfSmDataArray] = req.body
+      res.redirect('/pokemon')
+})
+
+
 app.get('/pokemon/:indexOfSmData' , (req,res) => {
       res.render('show.ejs', {
       pokemon: smData[req.params.indexOfSmData]
       })});
 
-app.get('/pokemon/edit' , (req,res) => {
-      res.render('edit.ejs')
-});
+
+
+app.get('/pokemon/:indexOfSmDataArray/edit' , (req,res) => {
+      res.render('edit.ejs', {
+            pokemon: smData[req.params.indexOfSmDataArray],
+            index: req.params.indexOfSmDataArray,
+      })});
 
 
 
