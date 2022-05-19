@@ -10,7 +10,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.urlencoded({extended:false}))
-app.use(methodOverride('method'))
+app.use(methodOverride('_method'))
 
 //Index
 app.get('/pokemon' , (req,res) => {
