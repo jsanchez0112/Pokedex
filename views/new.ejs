@@ -6,10 +6,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <style>
+            body{ 
+                  background-color: aliceblue;
+            }
+            div {
+                  display: flex;
+            }
       </style>
 </head>
 <body>
       <h1>Add a Pokemon!</h1>
+      <div>
 <form action="/pokemon" method="POST">
 Name: <input type="text" name="name" placeholder="Pokemon Name">
 Attack: <input type="text" name="attack" placeholder="Pokemon Attack">
@@ -17,7 +24,7 @@ Defense: <input type="text" name="defense" placeholder="Pokemon Defense">
 Speed: <input type="text" name="speed" placeholder="Pokemon Speed">
 Image Link: <input type="text" name="img" placeholder="Link">
 <input type="submit" value="Create Pokemon">
-
+</div>
 
 
 </form>
