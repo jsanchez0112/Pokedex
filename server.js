@@ -29,8 +29,8 @@ res.redirect('/pokemon')
 })
 
 //delete
-app.delete('/pokemon/:indexofSmDataArray' , (req,res) => {
-      smData.splice(req.params.indexofSmDataArray, 1)
+app.delete('/pokemon/:indexOfSmDataArray' , (req,res) => {
+      smData.splice(req.params.indexOfSmDataArray, 1)
       res.redirect('/pokemon')
 })
 
@@ -41,8 +41,13 @@ app.get('/pokemon/:indexOfSmDataArray/edit' , (req,res) => {
             index: req.params.indexOfSmDataArray,
       })});
 
-      app.put('/pokemon/:indexOfSmData' , (req,res) => {
-            smData[req.params.indexOfSmDataArray] = req.body
+      app.put('/pokemon/:indexOfSmDataArray' , (req,res) => {
+            smData[req.params.indexOfSmDataArray].name = req.body.name
+            smData[req.params.indexOfSmDataArray].stats.attack = req.body.attack
+            smData[req.params.indexOfSmDataArray].stats.speed = req.body.speed
+            smData[req.params.indexOfSmDataArray].stats.hp = req.body.hp
+            smData[req.params.indexOfSmDataArray].stats.img = req.body.img
+            smData[req.params.indexOfSmDataArray].stats.defense = req.body.defense
             res.redirect('/pokemon')
       })
 

@@ -8,11 +8,13 @@
   </head>
   <body>
     <h1>Edit the Pokemon Details!</h1>
-    <form action="/pokemon<%=index%>?_method>=PUT" method="POST">
-      Name: <input type="text" name="name" value="" /> 
-      Attack:<input type="text" name="attack" value="" /> 
-      Defense: <input type="text" name="defense" value="" /> 
-      Speed:<input type="text" name="speed" value="" />
+    <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%= pokemon.name %>" /> 
+      Attack: <input type="text" name="attack" value="<%= pokemon.stats.attack %>" /> 
+      Defense: <input type="text" name="defense" value="<%= pokemon.stats.defense %>" /> 
+      Speed:<input type="text" name="speed" value="<%= pokemon.stats.speed %>" />
+      HP: <input type="text" name="hp" value="<%= pokemon.stats.hp %>" /> 
+      Image <input type="text" name="" value="<%= pokemon.img %>">
       <br/>
       <input type="submit" name="" value="Submit Changes" />
     </form>
